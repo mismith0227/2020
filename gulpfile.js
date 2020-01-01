@@ -68,8 +68,8 @@ const server = done => {
 // =====================================================
 const watchFiles = done => {
   watch(config.tasks.html.src, html).on('change', browserSync.reload)
-  watch(config.tasks.scss.src, compileSass).on('change', browserSync.reload)
-  watch(config.tasks.webpack.src, compileJavascript).on(
+  watch(config.tasks.watch.css, compileSass).on('change', browserSync.reload)
+  watch(config.tasks.watch.webpack, compileJavascript).on(
     'change',
     browserSync.reload
   )

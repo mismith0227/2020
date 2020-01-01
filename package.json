@@ -1,0 +1,28 @@
+{
+  "name": "animation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp",
+    "prod": "gulp --env production",
+    "build": "gulp build --env production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "jquery": "^3.4.1",
+    "minimist": "^1.2.0",
+    "standard": "^14.3.1",
+    "standard-loader": "^7.0.0",
+    "webpack": "^4.41.5",
+    "webpack-stream": "^5.2.1"
+  }
+}

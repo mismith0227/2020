@@ -1,0 +1,33 @@
+.slidetime {
+  position: absolute;
+  bottom: -50px;
+  left: 0%;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  height: 1px;
+  background-color: #888;
+
+  .progressbar {
+    width: 0;
+    height: 4px;
+    background-color: #808080;
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    animation-name: barWidth;
+    animation-duration: 12000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes barWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

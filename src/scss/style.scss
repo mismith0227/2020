@@ -1,43 +1,46 @@
+@import './base/reset';
 @import './base/font';
+@import './atoms/cursor';
+@import './atoms/triangle';
+@import './molecules/logo';
+@import './molecules/slidetime';
+
+body {
+  background-color: #000;
+}
 
 .main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
 }
 
-#cursor,
-#follower {
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  transform: translate3d(-50%, -50%, 0);
+.slidewrap {
+  position: relative;
 }
 
-#cursor {
-  width: 8px;
-  height: 8px;
-  background-color: #000;
-  z-index: 1001;
-}
+.frame {
+  width: calc(100vw - 180px);
+  height: calc((100vw - 180px) * 0.5625);
+  max-width: 1200px;
+  max-height: calc(1200px * 0.5625);
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
 
-#follower {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  z-index: 1000;
-  transition: transform ease 0.1s;
-  text-align: center;
-  border: 1px solid #000;
-  span {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: bold;
-    transform: scale(0);
-  }
-  &.is-active {
-    transform: scale(3);
+  img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transition: opacity 1s ease;
+    opacity: 0;
+    &.show {
+      opacity: 1;
+      z-index: 10;
+    }
   }
 }

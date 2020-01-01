@@ -9,9 +9,8 @@ export const cursor = () => {
   let posX = 0
   let posY = 0
 
-  $('body').append('<div id="cursor">', '<div id="follower">')
+  $('body').append('<div id="follower">')
 
-  const cursor = $('#cursor')
   const follower = $('#follower')
 
   TweenMax.to({}, 0.01, {
@@ -26,18 +25,35 @@ export const cursor = () => {
           top: posY
         }
       })
-
-      TweenMax.set(cursor, {
-        css: {
-          left: mouseX,
-          top: mouseY
-        }
-      })
     }
   })
 
   $(document).on('mousemove', e => {
     mouseX = e.pageX
     mouseY = e.pageY
+  })
+
+  $('a').on({
+    mouseenter: e => {
+      if (e.target.text) {
+        $('#follower').append(
+          '<div id="cursor-text">' + e.target.text + '</div>'
+        )
+      }
+      follower.addClass('is-active')
+    },
+    mouseleave: () => {
+      follower.removeClass('is-active')
+      $('#cursor-text').remove()
+    }
+  })
+
+  $('.profile').on({
+    mouseenter: () => {
+      follower.addClass('is-active-profile')
+    },
+    mouseleave: () => {
+      follower.removeClass('is-active-profile')
+    }
   })
 }

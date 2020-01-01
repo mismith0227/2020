@@ -7,10 +7,12 @@ const slideshow = () => {
   let next = 1
 
   slideshowImg.first().addClass('show')
+  $('.counter').text('' + next + '/' + imgCount + '')
 
   setInterval(() => {
     $('.slideshow img.show').removeClass('show')
     $('.slideshow img:eq(' + next + ')').addClass('show')
+    $('.counter').text('' + (next + 1) + '/' + imgCount + '')
 
     if (next + 1 < imgCount) {
       next++

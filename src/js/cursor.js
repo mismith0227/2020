@@ -1,4 +1,5 @@
 import { TweenMax } from 'gsap'
+import { isSidebarOpen } from './sidebar'
 const $ = window.jQuery
 
 export const cursor = () => {
@@ -54,6 +55,21 @@ export const cursor = () => {
     },
     mouseleave: () => {
       follower.removeClass('is-active-profile')
+    }
+  })
+
+  $('.menuicon').on({
+    mouseenter: () => {
+      if (isSidebarOpen) {
+        $('#follower').append('<div id="cursor-text">close</div>')
+      } else {
+        $('#follower').append('<div id="cursor-text">about this website</div>')
+      }
+      follower.addClass('is-active-menuicon')
+    },
+    mouseleave: () => {
+      follower.removeClass('is-active-menuicon')
+      $('#cursor-text').remove()
     }
   })
 }

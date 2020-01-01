@@ -1,4 +1,4 @@
-import { TweenMax } from 'gsap'
+import TweenMax from 'gsap'
 import { isSidebarOpen } from './sidebar'
 const $ = window.jQuery
 

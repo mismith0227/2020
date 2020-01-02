@@ -1,5 +1,5 @@
 #follower {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
@@ -14,10 +14,6 @@
   left: 0;
   pointer-events: none;
   transform: translate3d(-50%, -50%, 0);
-
-  @include mq-up(sm) {
-    display: flex;
-  }
 
   span {
     display: inline-block;

@@ -28,6 +28,11 @@
     top: 5px;
     color: #808080;
     font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+
+    @include mq-up(sm) {
+      font-size: 14px;
+    }
   }
 }
 

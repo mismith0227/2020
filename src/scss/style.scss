@@ -38,6 +38,11 @@ body {
   position: relative;
 
   @include mq-up(sm) {
+    width: calc(100vw - 40px);
+    height: calc((100vw - 40px) * 0.5625);
+  }
+
+  @include mq-up(lg) {
     width: calc(100vw - 180px);
     height: calc((100vw - 180px) * 0.5625);
   }

@@ -1,3 +1,4 @@
+import gsap from 'gsap'
 const $ = window.jQuery
 
 const slideshow = () => {
@@ -20,6 +21,17 @@ const slideshow = () => {
       next = 0
     }
   }, interval)
+
+  const progressbar = $('.progressbar')
+
+  gsap.to(progressbar, {
+    css: {
+      width: '100%'
+    },
+    duration: 12,
+    repeat: -1,
+    ease: 'none'
+  })
 }
 
 export default slideshow

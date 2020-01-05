@@ -16,10 +16,6 @@
     position: absolute;
     top: -2px;
     left: 0;
-    animation-name: barWidth;
-    animation-duration: 12000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
   }
 
   .counter {
@@ -33,14 +29,5 @@
     @include mq-up(sm) {
       font-size: 14px;
     }
-  }
-}
-
-@keyframes barWidth {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
   }
 }

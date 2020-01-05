@@ -5,7 +5,6 @@ const $ = window.jQuery
 
 $(() => {
   const ua = navigator.userAgent
-  console.log(ua)
 
   if (
     ua.indexOf('iPhone') === -1 &&
@@ -15,7 +14,10 @@ $(() => {
     cursor()
   }
 
-  slideshow()
+  setTimeout(() => {
+    $('.loading').hide()
+    slideshow()
+  }, 1000)
 
   const menuIcon = $('.menuicon')
   menuIcon.on('click', () => {

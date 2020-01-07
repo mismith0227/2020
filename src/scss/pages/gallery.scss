@@ -9,11 +9,16 @@
 .gallery-layout {
   display: grid;
   margin: 120px 0 0;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 100px;
   width: 90%;
-  img {
-    width: 100%;
+
+  @include mq-up(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mq-up(lg) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -21,6 +26,39 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  figure {
+    position: relative;
+    margin: 0;
+
+    &:hover {
+      figcaption {
+        bottom: -18px;
+      }
+    }
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: $text;
+    transition: 0.2s;
+  }
+  img {
+    width: 100%;
+    transition: 0.2s;
+    filter: grayscale(100%);
+
+    &:hover {
+      filter: grayscale(0%);
+    }
+    &.is-zooming {
+      filter: grayscale(0%);
+    }
+  }
 }
 
 .lead-text {

@@ -26,7 +26,7 @@
       content="webサイトのアニメーションなどを試すサイト兼写真ギャラリー"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
@@ -34,7 +34,50 @@
   </head>
   <body>
     <div class="loading"></div>
-    <div class="main">
+
+    <header>
+      <h1 class="site-title">Moment</h1>
+      <div class="menuicon">
+        <span class="menu-text">menu</span>
+      </div>
+
+      <div class="sidebar">
+        <div class="sidebar-inner">
+          <div class="about">
+            <div class="avatar">
+              <img
+                src="https://pbs.twimg.com/profile_images/1176903104442142720/UO3wHvoE.jpg"
+                alt=""
+              />
+            </div>
+            <p class="name">misumi takuma</p>
+            <p class="text">
+              大阪在住のwebエンジニア趣味で写真を撮っています。
+            </p>
+            <p class="text">
+              このサイトはwebサイトのアニメーションなどを試すのが目的ですが、せっかくなので撮った写真のギャラリー要素も入れています。
+            </p>
+            <p class="text">
+              <a href="https://mismith.me/" target="_blank">About me</a>
+            </p>
+            <p class="text">
+              <a href="https://500px.com/mismith2216" target="_blank"
+                >View 500px</a
+              >
+            </p>
+          </div>
+          <div>
+            <p class="sitemap-title">Site map</p>
+            <ul class="nav">
+              <li><a href="/">top</a></li>
+              <li><a href="/gallery/">gallery</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="main content">
       <div class="slidewrap">
         <div class="frame slideshow">
           <img src="./images/img1.jpeg" />
@@ -48,41 +91,11 @@
           <img src="./images/img5.jpeg" />
 
           <img src="./images/img6.jpeg" />
-
-          <img src="./images/img7.jpeg" />
-
-          <img src="./images/img8.jpeg" />
         </div>
         <div class="slidetime">
           <span class="progressbar"></span>
           <span class="counter"></span>
         </div>
-      </div>
-    </div>
-
-    <div class="menuicon">
-      <span class="menu-text">menu</span>
-    </div>
-
-    <div class="sidebar">
-      <div class="about">
-        <div class="avatar">
-          <img
-            src="https://pbs.twimg.com/profile_images/1176903104442142720/UO3wHvoE.jpg"
-            alt=""
-          />
-        </div>
-        <p class="name">misumi takuma</p>
-        <p class="text">大阪在住のwebエンジニア趣味で写真を撮っています。</p>
-        <p class="text">
-          このサイトはwebサイトのアニメーションなどを試すのが目的ですが、せっかくなので撮った写真のギャラリー要素も入れています。
-        </p>
-        <p class="text">
-          <a href="https://mismith.me/" target="_blank">About me</a>
-        </p>
-        <p class="text">
-          <a href="https://500px.com/mismith2216" target="_blank">View 500px</a>
-        </p>
       </div>
     </div>
 

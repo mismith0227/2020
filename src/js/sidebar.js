@@ -5,11 +5,13 @@ export let isSidebarOpen = false
 export const toggle = () => {
   if (isSidebarOpen) {
     $('.sidebar').removeClass('open')
-    $('.main').removeClass('blur')
+    $('.sidebar-back').removeClass('open')
+    $('.content').removeClass('blur')
     isSidebarOpen = !isSidebarOpen
   } else {
     $('.sidebar').addClass('open')
-    $('.main').addClass('blur')
+    $('.sidebar-back').addClass('open')
+    $('.content').addClass('blur')
     isSidebarOpen = !isSidebarOpen
   }
 }

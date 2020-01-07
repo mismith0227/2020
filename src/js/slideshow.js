@@ -2,7 +2,7 @@ import gsap from 'gsap'
 const $ = window.jQuery
 
 const slideshow = () => {
-  const interval = 12000
+  const interval = 10000
   const slideshowImg = $('.slideshow img')
   const imgCount = slideshowImg.length
   let next = 1
@@ -28,7 +28,7 @@ const slideshow = () => {
     css: {
       width: '100%'
     },
-    duration: 12,
+    duration: 10,
     repeat: -1,
     ease: 'none'
   })

@@ -1,0 +1,31 @@
+.gallery {
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 0;
+}
+
+.gallery-layout {
+  display: grid;
+  margin: 120px 0 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+  width: 90%;
+  img {
+    width: 100%;
+  }
+}
+
+.gallery-image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lead-text {
+  margin: 0;
+  a {
+    color: #fff;
+  }
+}

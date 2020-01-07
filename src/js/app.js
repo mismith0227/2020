@@ -1,6 +1,7 @@
 import { cursor } from './cursor'
 import slideshow from './slideshow'
 import { toggle as toggleSidebar } from './sidebar'
+import Zooming from 'zooming'
 const $ = window.jQuery
 
 $(() => {
@@ -23,4 +24,12 @@ $(() => {
   menuIcon.on('click', () => {
     toggleSidebar()
   })
+
+  const zooming = new Zooming({
+    bgColor: 'rgba(0, 0, 0)',
+    bgOpacity: 0.7,
+    customSize: '90%'
+  })
+
+  zooming.listen('.img-zoomable')
 })

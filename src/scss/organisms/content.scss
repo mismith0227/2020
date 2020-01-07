@@ -1,0 +1,6 @@
+.content {
+  transition: 0.2s;
+  &.blur {
+    filter: blur(5px);
+  }
+}

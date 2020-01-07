@@ -1,6 +1,5 @@
 .gallery {
   display: flex;
-  color: #fff;
   flex-direction: column;
   align-items: center;
   padding: 120px 0;
@@ -34,6 +33,7 @@
     &:hover {
       figcaption {
         bottom: -18px;
+        opacity: 1;
       }
     }
   }
@@ -46,6 +46,7 @@
     font-size: 14px;
     color: $text;
     transition: 0.2s;
+    opacity: 0;
   }
   img {
     width: 100%;
@@ -58,12 +59,5 @@
     &.is-zooming {
       filter: grayscale(0%);
     }
-  }
-}
-
-.lead-text {
-  margin: 0;
-  a {
-    color: #fff;
   }
 }

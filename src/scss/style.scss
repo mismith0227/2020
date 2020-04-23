@@ -2,21 +2,5 @@
 @import './variable/color';
 @import './base/reset';
 @import './base/font';
-@import './atoms/cursor';
-@import './atoms/triangle';
-@import './atoms/menuIcon';
-@import './atoms/loading';
-@import './atoms/avatar';
-@import './atoms/site-title';
-@import './molecules/logo';
-@import './molecules/slidetime';
-@import './molecules/sidebar';
-@import './molecules/more';
-@import './molecules/frame';
-@import './organisms/content';
-@import './pages/top';
-@import './pages/gallery';
 
-// body {
-//   background-color: $bg;
-// }
+@import './page/page-triangle-loading';

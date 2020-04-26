@@ -5,7 +5,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, YakuHanJP, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif; }
 
 .page-triangle-loading {
-  background-color: #000; }
+  background-color: #fff; }
   .page-triangle-loading main {
     display: flex;
     align-items: center;
@@ -16,12 +16,13 @@ body {
     width: 100px;
     height: 100px;
     position: absolute;
-    position: relative; }
+    position: relative;
+    background-color: #ccc; }
     .page-triangle-loading .triangle-loading::before {
       display: block;
       position: absolute;
       content: '';
-      background: #fff;
+      background: currentColor;
       clip-path: polygon(0 0, 100% 0, 0 100%);
       top: 50%;
       left: 50%;
@@ -31,7 +32,7 @@ body {
       animation-duration: 1.5s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      animation-name: animation; }
+      transform: rotateZ(-135deg) rotateY(-180deg) rotateX(0deg); }
 
 @keyframes animation {
   from {

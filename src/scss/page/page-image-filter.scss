@@ -1,0 +1,28 @@
+.page-image-filter {
+  .image-wrap {
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      mix-blend-mode: normal;
+    }
+
+    .turb-mask {
+      position: absolute;
+      width: 110%;
+      height: 110%;
+      left: -5%;
+      top: -5%;
+      opacity: 0.5;
+      pointer-events: none;
+      background-color: rgba(255, 0, 0, 0.65);
+      background-image: url(https://drscdn.500px.org/photo/1008546941/q%3D80_m%3D1500/v2?sig=0dba392546df87d508566b93e5738f792cc1c24e48e7ac93ca87bc7e29377043);
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: multiply;
+      z-index: 0;
+    }
+  }
+}

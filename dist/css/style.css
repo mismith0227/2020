@@ -68,3 +68,50 @@ body {
     background-position: center;
     background-blend-mode: multiply;
     z-index: 0; }
+
+* {
+  box-sizing: border-box;
+  -webkit-transition: all 0.15s ease 0s;
+  transition: all 0.15s ease 0s; }
+
+:root {
+  --movement: 0.85;
+  --stop: 0.5;
+  --duration: calc((var(--movement) * (1 / var(--stop))));
+  --stagger: 0.1125;
+  --perspective: 500;
+  --size: 50;
+  --ease: cubic-bezier(1, -0.52, 0.26, 0.89);
+  --bg: #e6e6e6;
+  --panel: #fff;
+  --color: #0d0d0d;
+  --hue: 23;
+  --saturation: 100;
+  --lightness: 55; }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a1a;
+    --panel: #000;
+    --color: #f2f2f2; } }
+
+body {
+  -webkit-box-align: center;
+  align-items: center;
+  background: var(--bg);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  min-height: 100vh; }
+
+.scene {
+  -webkit-perspective: calc(var(--perspective) * 1px);
+  perspective: calc(var(--perspective) * 1px); }
+
+.word {
+  display: flex;
+  -webkit-transform: rotateX(-30deg) rotateY(45deg);
+  transform: rotateX(-30deg) rotateY(45deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; }

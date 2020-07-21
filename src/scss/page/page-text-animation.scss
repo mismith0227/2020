@@ -25,7 +25,8 @@
     --color: #f2f2f2;
   }
 }
-body {
+
+.page-text-animation {
   -webkit-box-align: center;
   align-items: center;
   background: var(--bg);
@@ -35,6 +36,7 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+
 .scene {
   -webkit-perspective: calc(var(--perspective) * 1px);
   perspective: calc(var(--perspective) * 1px);

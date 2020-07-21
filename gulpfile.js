@@ -52,13 +52,13 @@ const font = () => {
 
 // Clean
 // =====================================================
-const clean = cb => {
+const clean = (cb) => {
   return del(config.tasks.clean, cb)
 }
 
 // Server
 // =====================================================
-const server = done => {
+const server = (done) => {
   browserSync.init(config.tasks.server.browserSyncOptions)
   done()
   console.log('Server was launched')
@@ -66,7 +66,7 @@ const server = done => {
 
 // Watch
 // =====================================================
-const watchFiles = done => {
+const watchFiles = (done) => {
   watch(config.tasks.html.src, html).on('change', browserSync.reload)
   watch(config.tasks.watch.css, compileSass).on('change', browserSync.reload)
   watch(config.tasks.watch.webpack, compileJavascript).on(
@@ -78,18 +78,6 @@ const watchFiles = done => {
   done()
 }
 
-// Default
-// =====================================================
-const defaultTask = gulp.series(
-  html,
-  compileSass,
-  compileJavascript,
-  minifyImages,
-  font,
-  watchFiles,
-  server
-)
-
 // Build
 // =====================================================
 const build = gulp.series(
@@ -100,6 +88,10 @@ const build = gulp.series(
   minifyImages,
   font
 )
+
+// Default
+// =====================================================
+const defaultTask = gulp.series(build, watchFiles, server)
 
 exports.build = build
 

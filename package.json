@@ -14,7 +14,7 @@
     "@babel/preset-env": "^7.7.7",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
-    "del": "^5.1.0",
+    "del": "^6.0.0",
     "gsap": "^3.0.4",
     "gulp": "^4.0.2",
     "gulp-plumber": "^1.2.1",

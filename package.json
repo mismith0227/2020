@@ -23,7 +23,7 @@
     "minimist": "^1.2.0",
     "standard": "^14.3.1",
     "standard-loader": "^7.0.0",
-    "webpack": "^4.41.5",
+    "webpack": "^5.0.0",
     "webpack-stream": "^5.2.1",
     "zooming": "^2.1.1"
   }
